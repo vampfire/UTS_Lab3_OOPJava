@@ -1,0 +1,90 @@
+1. Jelaskan pengertian term berikut dan berikan contoh kodingan nya:
+
+
+a. Class = bertugas untuk mengumpulkan prosedur/fungsi dan variabel dalam satu tempat. Class merupakan blueprint dari sebuah objek atau cetakan untuk membuat objek. Contoh class sebagai berikut ini.
+
+Contoh:
+
+public class Car{
+ 
+    // Body Class
+ 
+}
+
+
+b. Object = object adalah sebuah variabel instance yang merupakan wujud dari class. Instance merupakan wujud dari sebuah kelas.
+
+
+c. Constructor = method khusus yang dijalankan secara otomatis pada saat sebuah object dibuat, yakni saat proses instansiasi.
+
+Constructor biasa dipakai untuk membuat proses awal dalam persiapan object, seperti memberi nilai kepada property, memanggil method internal serta beberapa proses lain yang dirasa perlu.
+
+Contoh:
+
+class Laptop {
+  Laptop() {
+    System.out.println("Satu object Laptop sudah di buat");
+  }
+};
+ 
+class BelajarJava {
+  public static void main(String args[]){
+    Laptop laptopA = new Laptop();
+    Laptop laptopB = new Laptop();
+    Laptop laptopC = new Laptop();
+  }
+}
+
+
+d. Method Overloading = membuat beberapa method dengan nama yang sama, tapi dibedakan dari jumlah dan/atau tipe parameter.
+
+
+class Belajar {
+   
+  static int tambah(int var1, int var2) {
+    return var1 + var2;
+  }
+    
+  static int tambah(int var1, int var2, int var3) {
+    return var1 + var2 + var3;
+  }
+    
+  static String tambah(String var1, String var2) {
+    return var1 + " tambah " + var2;
+  }
+ 
+  public static void main(String args[]){
+    System.out.println( tambah(1,2) );
+    System.out.println( tambah(5,4,3) );
+    System.out.println( tambah("satu","dua") );
+  }
+   
+}
+
+
+e. Method setter dan getter = dua method yang tugasnya untuk mengambil dan mengisi data ke dalam objek.
+
+Contoh:
+
+class User {
+    private String username;
+    private String password;
+
+    // ini method setter
+    public void setUsername(String username){
+        this.username = username;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    // ini method getter
+    public String getUsername(){
+        return this.username;
+    }
+
+    public String getPassword(){
+        return this.password;
+    }
+}
